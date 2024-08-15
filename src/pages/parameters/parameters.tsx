@@ -121,7 +121,7 @@ export default function Parameters() {
   }
   return (
     <View>
-      <AtNoticebar className="gonggao">注: 测试主题, 屏幕方向, 小电流将不支持DBT开头设备</AtNoticebar>
+      <AtNoticebar className="gonggao">注: 测试主题, 屏幕方向, 小电流将不支持DBT开头设备 ----------Q群: 1004300610</AtNoticebar>
       <View className="myItem">
         <View className="item-content">时间校准</View>
         <View className="item-extra">{dateSel}</View>
