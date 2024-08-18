@@ -2,7 +2,7 @@ import Taro from "@tarojs/taro";
 
 import { View, Picker } from "@tarojs/components";
 import moment from "moment";
-import { AtList, AtListItem, AtButton ,AtNoticebar} from "taro-ui";
+import { AtList, AtListItem, AtButton, AtNoticebar } from "taro-ui";
 import "./parameters.less";
 import { useState } from "react";
 import { get as getGlobalData } from "../global_data";
@@ -121,7 +121,7 @@ export default function Parameters() {
   }
   return (
     <View>
-      <AtNoticebar className="gonggao">注: 测试主题, 屏幕方向, 小电流将不支持DBT开头设备 ----------Q群: 1004300610</AtNoticebar>
+      <AtNoticebar className="gonggao">注: 测试主题, 屏幕方向, 小电流将不支持DBT开头设备----若功能无反应代表您的设备不支持----Q交流群: 1004300610</AtNoticebar>
       <View className="myItem">
         <View className="item-content">时间校准</View>
         <View className="item-extra">{dateSel}</View>

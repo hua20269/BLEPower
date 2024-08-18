@@ -201,13 +201,13 @@ const DevicesList: React.FC<DevicesProps> = (props) => {
             <View className="icontext">
               <Image src={bat_v_icon}></Image>
               <View>
-                电压: <Text>{(omitInformation.bat_V * 1).toFixed(2)}</Text>
+                电压: <Text>{(omitInformation.bat_V * 1).toFixed(1)}v</Text>
               </View>
             </View>
             <View className="icontext">
               <Image src={bat_a_icon}></Image>
               <View>
-                电流: <Text>{(omitInformation.bat_A * 1).toFixed(2)}</Text>
+                电流: <Text>{(omitInformation.sys_outinv * omitInformation.bat_A / omitInformation.bat_V).toFixed(1)}a</Text>   
               </View>
             </View>
             <View className="icontext itbottom">
@@ -215,9 +215,9 @@ const DevicesList: React.FC<DevicesProps> = (props) => {
               <View>
                 状态:{" "}
                 <Text>
-                  {omitInformation.A_C == (1 || 4)
-                    ? "放电"
-                    : omitInformation.A_C == (2 || 8)
+                  {omitInformation.sys == (1 || 4)
+                    ? "放电" // 首页连接蓝牙显示的数据
+                    : omitInformation.sys == (2 || 8)
                       ? "充电"
                       : "闲"}{" "}
                 </Text>
@@ -226,7 +226,7 @@ const DevicesList: React.FC<DevicesProps> = (props) => {
             <View className="icontext itbottom">
               <Image src={temp_icon}></Image>
               <View>
-                温度: <Text>{(omitInformation.ic_temp * 1).toFixed(2)}</Text>
+                温度: <Text>{(omitInformation.bat_ntc * 1).toFixed(0)}℃</Text>
               </View>
             </View>
           </View>
@@ -236,7 +236,7 @@ const DevicesList: React.FC<DevicesProps> = (props) => {
           style={devicesData.name == ("DBT01" || "AC225") ? style1 : style2}
         >
 
-        </View>
+        </View> 
       </View>
     </View>
   );

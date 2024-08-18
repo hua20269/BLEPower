@@ -136,14 +136,14 @@ export default function Detail() {
     const sys_a = notify.bat_A.toFixed(2); // 系统电流
     const sys_w = (notify.sys_outinv * notify.bat_A).toFixed(2); // 功率
 
-    const sys_status = notify.sys == (1 || 4) ? "放电" : notify.sys == (2 || 8) ? "充电" : "闲";//老版本为  8和4
+    const sys = notify.sys == (1 || 4) ? "放电中" : notify.sys == (2 || 8) ? "充电中" : "闲";//老版本为  8和4
 
     const usb_a = notify.A_C == (1 || 5) ? "ON" : "OFF";
     const type_c = notify.A_C == (4 || 5) ? "ON" : "OFF";
     const smalla = notify.smalla == 1 ? "ON" : "OFF";
     setSetting3(() => {
       return [
-        { img: sys_state_icon, name: "充放状态", value: sys_status, unit: "" },
+        { img: sys_state_icon, name: "充放状态", value: sys, unit: "" },
         {
           img: temp_icon,
           name: "电池温度",
@@ -167,7 +167,7 @@ export default function Detail() {
           img: sys_v_icon,
           name: "系统电压",
           value: sys_v,
-          unit: "v",
+          unit: "V",
         },
         { img: gaody, name: "A口", value: usb_a, unit: "" },
         { img: bat_a_icon, name: "电池电流", value: bat_a, unit: "A" },

@@ -9,7 +9,7 @@ type Devices = {
   serviceData: Object;
 };
 
-type ChargeDischarge = 4 | 8 | number;
+type ChargeDischarge = 1 | 2 | 4 | 8 | number;
 
 /* 系统温度
 系统电压
@@ -36,3 +36,4 @@ type NofityData = {
   bat_cir: any; // 循环次数
   name: string;
 };
+   

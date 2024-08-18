@@ -3,7 +3,7 @@ import DevicesList from "../components/devicesList";
 import { useUnload } from "@tarojs/taro";
 import { useState } from "react";
 import Taro from "@tarojs/taro";
-import { AtFab, AtNoticebar } from "taro-ui";
+import { AtFab } from "taro-ui";
 import "./index.less";
 
 import { inArray } from "../../util/util";
@@ -144,7 +144,7 @@ export default function Index() {
       <View className="title">
         <Text className="hi">Hi~</Text>
         <View>
-          <Text className="welcome">欢迎使用彩屏小助手----Q群: 1004300610</Text>
+          <Text className="welcome">欢迎使用彩屏小助手 ---- Q群: 1004300610</Text>
           {/* <AtNoticebar marquee  speed='50'>
             Q交流群: 1004300610
           </AtNoticebar> */}
